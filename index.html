@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MANIBUS</title>
+  <link rel="shortcut icon" href="/logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+  <div class="playArea">
+    <div id="NAME">
+      <h1 id="title">Collisions</h1>
+    </div>
+
+    <div class="playground">
+      <div class="track" id="track"></div>
+      <div class="cart cart1" id="cart1"></div>
+      <div class="cart cart2" id="cart2"></div>
+    </div>
+
+    <div class="tool">
+      <div class="row">
+        <div class="col">
+            <div class="input-group-sm input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Mass 1</span>
+              </div>
+              <input type="text" 
+                     class="form-control" 
+                     id="mass1">
+              <div class="input-group-append">
+                <span class="input-group-text">kg</span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group-sm input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Mass 2</span>
+              </div>
+              <input type="text" class="form-control" id="mass2">
+              <div class="input-group-append">
+            <span class="input-group-text">kg</span>
+          </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="input-group-sm input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  V1(t=0) </span>
+              </div>
+              <input type="text" class="form-control" id="acc1a" placeholder="3" >
+              <div class="input-group-append">
+            <span class="input-group-text">m/s</span>
+          </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group-sm input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  V1</span>
+              </div>
+              <input type="text" class="form-control" id="acc1" placeholder="0" readonly>
+              <div class="input-group-append">
+            <span class="input-group-text">m/s</span>
+          </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group-sm input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  V2</span>
+              </div>
+              <input type="text" class="form-control" id="acc2" placeholder="0" readonly>
+              <div class="input-group-append">
+            <span class="input-group-text">m/s</span>
+          </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  Cart 1 Position</span>
+              </div>
+              <input type="text" class="form-control" id="pos1txt" placeholder="12" readonly>
+              <div class="input-group-append">
+            <span class="input-group-text">m</span>
+          </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  Cart 2 Position</span>
+              </div>
+              <input type="text" class="form-control" id="pos2txt" placeholder="45" readonly>
+              <div class="input-group-append">
+            <span class="input-group-text">m</span>
+          </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div id="elastic-con" 
+               class="col">
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" aria-label="Checkbox" id="elastic" onclick="eSwitch()">
+            </div>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">Elastic?</span>
+          </div>
+        </div>
+          </div>
+          <div class="col">
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text"
+                  id = "v1txt">V<sub>f</sub> =</span>
+              </div>
+              <div class="input-group-append">
+                <span class="input-group-text"
+                  id="v1eq">
+                  (m<sub>1</sub> * v<sub>1_i</sub>) / (m<sub>1</sub> +  m<sub>2</sub>)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div id='varient'></div>
+        </div>
+        <button type="button" class="btn btn-light" id="view" onclick="clicked()">Go!</button>
+        <button type="button" class="btn btn-warning" id="Reset" onclick="cancelIt()">Reset</button>
+        <div class="demo-select">
+        </div>
+      </div>
+  </div>
+  
+<script src="script.js"></script>  
+</body>
+</html>
