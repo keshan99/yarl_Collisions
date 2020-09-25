@@ -7,6 +7,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: linear-gradient(to bottom, #04255a, #03366e, #014881, #005b94, #006ea7, #2e7cb6, #478ac5, #5d98d4, #82a4e1, #a3b0ec, #c1bcf6, #ddc9ff);
 }
 body {
   
